@@ -113,6 +113,6 @@ class ActiveQueryCache extends ActiveQuery
      */
     protected function getCacheKey(Command $command)
     {
-        return $this->cacheKeyPrefix.md5(serialize([$command->params,$command->sql,$command->db]));
+        return $this->cacheKeyPrefix.md5(serialize([$command->params,$command->sql,$command->db->dsn,$command->db->username]));
     }
 }
