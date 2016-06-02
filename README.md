@@ -9,10 +9,11 @@ File:models/Some.php
 namespace models;
 use components\yii2ArEasyCache\ActiveRecordCacheTrait; 
 
-class Some extends \yii\db\ActiveRecord{
+class Some extends \yii\db\ActiveRecord
+{
 	use ActiveRecordCacheTrait;
 	
-	//if you want config the cache
+	//if you want config the cache,override.
 	public static function cacheConfig()
     {
         return [
