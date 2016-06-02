@@ -10,7 +10,8 @@ namespace models;
 use components\yii2ArEasyCache\ActiveRecordCacheTrait; 
 
 class Some extends \yii\db\ActiveRecord{
-	use ActiveRecordCacheTrait;//just add this line
+	use ActiveRecordCacheTrait;
+	
 	//if you want config the cache
 	public static function cacheConfig()
     {
@@ -20,6 +21,8 @@ class Some extends \yii\db\ActiveRecord{
      	 	'cacheDuration' => 60,
         ];
     }
+	
+	
 	......your code here.
 }
 ```
